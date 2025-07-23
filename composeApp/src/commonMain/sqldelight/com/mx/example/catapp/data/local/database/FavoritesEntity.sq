@@ -1,0 +1,27 @@
+CREATE TABLE cat_favorites (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    id_user TEXT NOT NULL,
+    id_cat TEXT NOT NULL,
+    description TEXT,
+    origin TEXT,
+    temperament TEXT,
+    life_span TEXT,
+    image TEXT,
+    is_favorite INTEGER DEFAULT 0
+);
+
+selectAll:
+SELECT * FROM cat_favorites;
+
+selectByIdUser:
+SELECT * FROM cat_favorites
+WHERE id_user = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO cat_favorites(
+     id_user, id_cat, name, description, origin, temperament, life_span, image, is_favorite
+) VALUES (?, ?, ?,?,?, ?, ?, ?, ?);
+
+deleteById:
+DELETE FROM cat_favorites WHERE id_cat = ? AND id_user = ?;

@@ -1,0 +1,32 @@
+CREATE TABLE cat_breed (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id_cat TEXT NOT NULL,
+    name TEXT,
+    description TEXT,
+    origin TEXT,
+    temperament TEXT,
+    life_span TEXT,
+    image TEXT,
+    is_favorite INTEGER DEFAULT 0
+);
+
+selectAll:
+SELECT * FROM cat_breed;
+
+selectById:
+SELECT * FROM cat_breed
+WHERE id = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO cat_breed(
+    id_cat, name, description, origin, temperament, life_span, image,  is_favorite
+) VALUES ( ?, ?, ?, ?, ?, ?, ?,?);
+
+deleteAll:
+DELETE FROM cat_breed;
+
+updateIsFavoriteById:
+UPDATE cat_breed
+SET is_favorite = ?
+WHERE id_cat = ?;
+

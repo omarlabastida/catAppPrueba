@@ -1,0 +1,17 @@
+CREATE TABLE UserEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    userName TEXT NOT NULL,
+    password TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM UserEntity;
+
+selectByUserName:
+SELECT * FROM UserEntity WHERE userName = ?;
+
+insertUser:
+INSERT INTO UserEntity(userName, password) VALUES (?, ?);
+
+deleteAll:
+DELETE FROM UserEntity;
