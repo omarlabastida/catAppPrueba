@@ -16,3 +16,72 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+# ============================
+# Kotlin Multiplatform: Android + Desktop
+# ============================
+
+# --- Gradle ---
+.gradle/
+build/
+**/build/
+gradle-app.setting
+gradle.properties
+!gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# --- IntelliJ / Android Studio ---
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# --- Kotlin / Java ---
+*.class
+*.jar
+*.war
+*.ear
+*.kt~
+*.kts~
+out/
+bin/
+
+# --- Android ---
+*.apk
+*.ap_
+*.dex
+*.so
+*.log
+*.hprof
+captures/
+android/local.properties
+
+# Android Studio auto-generated folders
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/compiler.xml
+.idea/codestyles/
+.idea/deploymentTargetDropDown.xml
+.idea/gradle.xml
+.idea/runConfigurations/
+.idea/dictionaries/
+
+# --- Desktop (Compose / JVM) ---
+*.skiko/
+*.compose-cache/
+
+# --- OS Specific ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+.konan/
+
